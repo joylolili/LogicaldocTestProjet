@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a9debb42-ceb9-4694-8465-04ff9dc39715" created="2.4.0" activeEnvironment="Default environment" name="Logicaldoc_SOAP_Search" resourceRoot="${projectDir}" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6aff5093-6952-4dcf-b59e-f6ff20885b9f" wsaVersion="NONE" name="SoapSearchServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapSearchServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/logicaldoc/services/Search?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/logicaldoc/services/Search?wsdl"><con:part><con:url>http://localhost:8080/logicaldoc/services/Search?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapSearchServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:import location="http://localhost:8080/logicaldoc/services/Search?wsdl=Search.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
+  <wsdl:binding name="SoapSearchServiceServiceSoapBinding" type="ns1:Search">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="findByFilename">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findByFilename">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findByFilenameResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="find">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findFolders">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findFolders">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findFoldersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapSearchServiceService">
+    <wsdl:port binding="tns:SoapSearchServiceServiceSoapBinding" name="SoapSearchServicePort">
+      <soap:address location="http://localhost:8080/logicaldoc/services/Search"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/logicaldoc/services/Search?wsdl=Search.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Search" targetNamespace="http://ws.logicaldoc.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.logicaldoc.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.logicaldoc.com">
+      <xs:element name="attribute" type="tns:WSAttribute"/>
+      <xs:element name="document" type="tns:WSDocument"/>
+      <xs:element name="find" type="tns:find"/>
+      <xs:element name="findByFilename" type="tns:findByFilename"/>
+      <xs:element name="findByFilenameResponse" type="tns:findByFilenameResponse"/>
+      <xs:element name="findFolders" type="tns:findFolders"/>
+      <xs:element name="findFoldersResponse" type="tns:findFoldersResponse"/>
+      <xs:element name="findResponse" type="tns:findResponse"/>
+      <xs:element name="folder" type="tns:WSFolder"/>
+      <xs:element name="searchoptions" type="tns:WSSearchOptions"/>
+      <xs:complexType name="findByFilename">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element minOccurs="0" name="filename" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findByFilenameResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="document" type="tns:WSDocument"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSDocument">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="tns:WSAttribute"/>
+          <xs:element minOccurs="0" name="comment" type="xs:string"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element name="creatorId" type="xs:long"/>
+          <xs:element minOccurs="0" name="customId" type="xs:string"/>
+          <xs:element minOccurs="0" name="date" type="xs:string"/>
+          <xs:element minOccurs="0" name="deleteUserId" type="xs:long"/>
+          <xs:element minOccurs="0" name="digest" type="xs:string"/>
+          <xs:element minOccurs="0" name="docRef" type="xs:long"/>
+          <xs:element minOccurs="0" name="docRefType" type="xs:string"/>
+          <xs:element minOccurs="0" name="exportId" type="xs:long"/>
+          <xs:element minOccurs="0" name="exportName" type="xs:string"/>
+          <xs:element name="exportStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+          <xs:element name="fileSize" type="xs:long"/>
+          <xs:element minOccurs="0" name="fileVersion" type="xs:string"/>
+          <xs:element minOccurs="0" name="folderId" type="xs:long"/>
+          <xs:element minOccurs="0" name="formId" type="xs:long"/>
+          <xs:element minOccurs="0" name="icon" type="xs:string"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="immutable" type="xs:int"/>
+          <xs:element name="indexed" type="xs:int"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="lockUserId" type="xs:long"/>
+          <xs:element name="nature" type="xs:int"/>
+          <xs:element name="pages" type="xs:int"/>
+          <xs:element minOccurs="0" name="passwordProtected" type="xs:int"/>
+          <xs:element minOccurs="0" name="path" type="xs:string"/>
+          <xs:element name="published" type="xs:int"/>
+          <xs:element minOccurs="0" name="publisher" type="xs:string"/>
+          <xs:element name="publisherId" type="xs:long"/>
+          <xs:element minOccurs="0" name="rating" type="xs:int"/>
+          <xs:element minOccurs="0" name="score" type="xs:int"/>
+          <xs:element name="signed" type="xs:int"/>
+          <xs:element name="stamped" type="xs:int"/>
+          <xs:element minOccurs="0" name="startPublishing" type="xs:string"/>
+          <xs:element name="status" type="xs:int"/>
+          <xs:element minOccurs="0" name="stopPublishing" type="xs:string"/>
+          <xs:element minOccurs="0" name="summary" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element minOccurs="0" name="title" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+          <xs:element minOccurs="0" name="version" type="xs:string"/>
+          <xs:element minOccurs="0" name="workflowStatus" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSAttribute">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="doubleValue" type="xs:double"/>
+          <xs:element name="editor" type="xs:int"/>
+          <xs:element minOccurs="0" name="intValue" type="xs:long"/>
+          <xs:element minOccurs="0" name="label" type="xs:string"/>
+          <xs:element name="mandatory" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="setId" type="xs:long"/>
+          <xs:element minOccurs="0" name="stringValue" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+          <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="find">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element minOccurs="0" name="options" type="tns:WSSearchOptions"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSSearchOptions">
+        <xs:sequence>
+          <xs:element name="caseSensitive" type="xs:int"/>
+          <xs:element minOccurs="0" name="creationFrom" type="xs:string"/>
+          <xs:element minOccurs="0" name="creationTo" type="xs:string"/>
+          <xs:element minOccurs="0" name="dateFrom" type="xs:string"/>
+          <xs:element minOccurs="0" name="dateTo" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="expression" type="xs:string"/>
+          <xs:element minOccurs="0" name="expressionLanguage" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="fields" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="filterIds" nillable="true" type="xs:long"/>
+          <xs:element minOccurs="0" name="folderId" type="xs:long"/>
+          <xs:element minOccurs="0" name="format" type="xs:string"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element name="maxHits" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="retrieveAliases" type="xs:int"/>
+          <xs:element name="searchInSubPath" type="xs:int"/>
+          <xs:element minOccurs="0" name="sizeMax" type="xs:long"/>
+          <xs:element minOccurs="0" name="sizeMin" type="xs:long"/>
+          <xs:element minOccurs="0" name="template" type="xs:long"/>
+          <xs:element minOccurs="0" name="topOperator" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="searchResult" type="tns:WSSearchResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSSearchResult">
+        <xs:sequence>
+          <xs:element name="estimatedHitsNumber" type="xs:long"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="hits" nillable="true" type="tns:WSDocument"/>
+          <xs:element name="moreHits" type="xs:int"/>
+          <xs:element name="time" type="xs:long"/>
+          <xs:element name="totalHits" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findFolders">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findFoldersResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="folder" type="tns:WSFolder"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSFolder">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="tns:WSAttribute"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="foldRef" type="xs:long"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="parentId" type="xs:long"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="storage" type="xs:int"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element name="templateLocked" type="xs:int"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="findByFilenameResponse">
+    <wsdl:part element="ns1:findByFilenameResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="find">
+    <wsdl:part element="ns1:find" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findFolders">
+    <wsdl:part element="ns1:findFolders" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findByFilename">
+    <wsdl:part element="ns1:findByFilename" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findResponse">
+    <wsdl:part element="ns1:findResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="ns1:Exception" name="Exception"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findFoldersResponse">
+    <wsdl:part element="ns1:findFoldersResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Search">
+    <wsdl:operation name="findByFilename">
+      <wsdl:input message="ns1:findByFilename" name="findByFilename"></wsdl:input>
+      <wsdl:output message="ns1:findByFilenameResponse" name="findByFilenameResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input message="ns1:find" name="find"></wsdl:input>
+      <wsdl:output message="ns1:findResponse" name="findResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findFolders">
+      <wsdl:input message="ns1:findFolders" name="findFolders"></wsdl:input>
+      <wsdl:output message="ns1:findFoldersResponse" name="findFoldersResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint></con:endpoints><con:operation id="506fe0d4-a16f-436b-bade-51df8b00ed0c" isOneWay="false" action="" name="find" bindingOperationName="find" type="Request-Response" outputName="findResponse" inputName="find" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="82c1dd80-2acc-4219-aabf-6b79ce4232c0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:find>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <!--Optional:-->\r
+         <options>\r
+            <caseSensitive>?</caseSensitive>\r
+            <!--Optional:-->\r
+            <creationFrom>?</creationFrom>\r
+            <!--Optional:-->\r
+            <creationTo>?</creationTo>\r
+            <!--Optional:-->\r
+            <dateFrom>?</dateFrom>\r
+            <!--Optional:-->\r
+            <dateTo>?</dateTo>\r
+            <!--Optional:-->\r
+            <description>?</description>\r
+            <!--Optional:-->\r
+            <expression>?</expression>\r
+            <!--Optional:-->\r
+            <expressionLanguage>?</expressionLanguage>\r
+            <!--Zero or more repetitions:-->\r
+            <fields>?</fields>\r
+            <!--Zero or more repetitions:-->\r
+            <filterIds>?</filterIds>\r
+            <!--Optional:-->\r
+            <folderId>?</folderId>\r
+            <!--Optional:-->\r
+            <format>?</format>\r
+            <!--Optional:-->\r
+            <language>?</language>\r
+            <maxHits>?</maxHits>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <retrieveAliases>?</retrieveAliases>\r
+            <searchInSubPath>?</searchInSubPath>\r
+            <!--Optional:-->\r
+            <sizeMax>?</sizeMax>\r
+            <!--Optional:-->\r
+            <sizeMin>?</sizeMin>\r
+            <!--Optional:-->\r
+            <template>?</template>\r
+            <!--Optional:-->\r
+            <topOperator>?</topOperator>\r
+            <type>?</type>\r
+         </options>\r
+      </ws:find>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/find"/></con:call></con:operation><con:operation id="b9d071ca-666e-4b74-b5d0-b1641e671c3c" isOneWay="false" action="" name="findByFilename" bindingOperationName="findByFilename" type="Request-Response" outputName="findByFilenameResponse" inputName="findByFilename" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fc71c19e-1f7c-4e0c-bbce-45cce08148f2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:findByFilename>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <!--Optional:-->\r
+         <filename>?</filename>\r
+      </ws:findByFilename>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/findByFilename"/></con:call></con:operation><con:operation id="4f5464a5-f0a9-4207-b2d1-d8cd46104b3d" isOneWay="false" action="" name="findFolders" bindingOperationName="findFolders" type="Request-Response" outputName="findFoldersResponse" inputName="findFolders" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a979e5f9-3625-4478-bed9-77ace5b94ba1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:findFolders>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <!--Optional:-->\r
+         <name>?</name>\r
+      </ws:findFolders>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/findFolders"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="af562024-b24b-40b9-85f0-052112499d3e" wsaVersion="NONE" name="SoapAuthServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapAuthServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/logicaldoc/services/Auth?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/logicaldoc/services/Auth?wsdl"><con:part><con:url>http://localhost:8080/logicaldoc/services/Auth?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapAuthServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:import location="http://localhost:8080/logicaldoc/services/Auth?wsdl=Auth.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
+  <wsdl:binding name="SoapAuthServiceServiceSoapBinding" type="ns1:Auth">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="valid">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="valid">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="logout">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="logoutResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="renew">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="renew">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="renewResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="login">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapAuthServiceService">
+    <wsdl:port binding="tns:SoapAuthServiceServiceSoapBinding" name="SoapAuthServicePort">
+      <soap:address location="http://localhost:8080/logicaldoc/services/Auth"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8080/logicaldoc/services/Auth?wsdl=Auth.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Auth" targetNamespace="http://ws.logicaldoc.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.logicaldoc.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.logicaldoc.com">
+      <xs:element name="login" type="tns:login"/>
+      <xs:element name="loginResponse" type="tns:loginResponse"/>
+      <xs:element name="logout" type="tns:logout"/>
+      <xs:element name="logoutResponse" type="tns:logoutResponse"/>
+      <xs:element name="renew" type="tns:renew"/>
+      <xs:element name="renewResponse" type="tns:renewResponse"/>
+      <xs:element name="valid" type="tns:valid"/>
+      <xs:element name="validResponse" type="tns:validResponse"/>
+      <xs:complexType name="valid">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="logout">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="logoutResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="renew">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="renewResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="login">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="username" type="xs:string"/>
+          <xs:element minOccurs="0" name="password" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="loginResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="valid">
+    <wsdl:part element="ns1:valid" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="renewResponse">
+    <wsdl:part element="ns1:renewResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validResponse">
+    <wsdl:part element="ns1:validResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logout">
+    <wsdl:part element="ns1:logout" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutResponse">
+    <wsdl:part element="ns1:logoutResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part element="ns1:loginResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="renew">
+    <wsdl:part element="ns1:renew" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="login">
+    <wsdl:part element="ns1:login" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="ns1:Exception" name="Exception"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Auth">
+    <wsdl:operation name="valid">
+      <wsdl:input message="ns1:valid" name="valid"></wsdl:input>
+      <wsdl:output message="ns1:validResponse" name="validResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input message="ns1:logout" name="logout"></wsdl:input>
+      <wsdl:output message="ns1:logoutResponse" name="logoutResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="renew">
+      <wsdl:input message="ns1:renew" name="renew"></wsdl:input>
+      <wsdl:output message="ns1:renewResponse" name="renewResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="ns1:login" name="login"></wsdl:input>
+      <wsdl:output message="ns1:loginResponse" name="loginResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/logicaldoc/services/Auth</con:endpoint></con:endpoints><con:operation id="5751f927-2328-4850-9db2-1ed11ab63820" isOneWay="false" action="" name="login" bindingOperationName="login" type="Request-Response" outputName="loginResponse" inputName="login" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ff0fe5bc-4f89-46a2-ae69-6a7aa137ee06" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:login>\r
+         <!--Optional:-->\r
+         <username>?</username>\r
+         <!--Optional:-->\r
+         <password>?</password>\r
+      </ws:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/login"/></con:call></con:operation><con:operation id="a76e9f62-396a-48d9-891d-4a1398ff5bb0" isOneWay="false" action="" name="logout" bindingOperationName="logout" type="Request-Response" outputName="logoutResponse" inputName="logout" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a5a6bbfa-900f-40f9-9088-190dd843edee" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:logout>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+      </ws:logout>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/logout"/></con:call></con:operation><con:operation id="1c09d82c-7e2c-4083-9791-095f3a525dcf" isOneWay="false" action="" name="renew" bindingOperationName="renew" type="Request-Response" outputName="renewResponse" inputName="renew" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c4fe2d92-976c-43a0-be88-e69451bb832e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:renew>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+      </ws:renew>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/renew"/></con:call></con:operation><con:operation id="85795be9-653e-4bf7-80ad-bc007e66971c" isOneWay="false" action="" name="valid" bindingOperationName="valid" type="Request-Response" outputName="validResponse" inputName="valid" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f4b9874f-b25c-4cb1-b8d3-0adf3bf0645b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:valid>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+      </ws:valid>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/valid"/></con:call></con:operation></con:interface><con:testSuite id="b51e8ff6-eb27-407e-8f71-02bea6dbb5d4" name="SoapSearchServiceServiceSoapBindingTestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="66ff6151-a638-4484-85cd-37cff4e9440e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="searchTestCase" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="f4acdd98-06cb-474f-93b0-cc8499ba7a29" name="login"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="login" id="1f85be5a-050b-4a79-8ea9-17ddb112ee50"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:login>
+         <!--Optional:-->
+         <username>${#TestSuite#user}</username>
+         <!--Optional:-->
+         <password>${#TestSuite#password}</password>
+      </ws:login>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Auth/login" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="PropertyTransfer 1" id="695c7db8-764b-4979-b78b-be37e9ff1b88"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>return</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>login</con:sourceStep><con:sourcePath>declare namespace ns2='http://ws.logicaldoc.com';
+//ns2:loginResponse[1]/return[1]</con:sourcePath><con:targetType>SID</con:targetType><con:targetStep>SID</con:targetStep><con:targetPath/><con:type>XPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="SID" id="8f6ee474-61d2-412d-bc33-5e63e2ffe696"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>SID</con:name><con:value>ccc8bc40-2193-40fc-ad18-44a961f8b9e0</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="e1b45406-84e2-4994-8aba-eec0f78bbc9f" name="findByFilename"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>findByFilename</con:operation><con:request name="findByFilename" id="e35880ef-d920-4e21-a426-c00b8133f39d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:findByFilename>
+         <!--Optional:-->
+         <sid>${SID#SID}</sid>
+         <!--Optional:-->
+         <filename>${#TestSuite#fileName}</filename>
+      </ws:findByFilename>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="b7d16087-ab72-464a-9da1-c72f62df6620" name="Match content of [fileName]"><con:configuration><path>declare namespace ns2='http://ws.logicaldoc.com';
+//ns2:findByFilenameResponse[1]/document[1]/fileName[1]/text()</path><content>titi.txt</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="626bd86b-e613-4682-a052-2600430cc105" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Search/findByFilename" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="e78bad1a-37b7-4542-a89e-cd78e27121ad" name="find_by_keyword"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>find</con:operation><con:request name="find_by_keyword" id="5a6420b8-6bc4-4751-97a4-2d954d340ea4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:find>
+         <!--Optional:-->
+         <sid>${SID#SID}</sid>
+         <!--Optional:-->
+         <options>
+            <caseSensitive>0</caseSensitive>
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Zero or more repetitions:-->
+            
+            <!--Zero or more repetitions:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <expression>${#TestSuite#keyword}</expression><maxHits>50</maxHits>
+            <!--Optional:-->
+            
+            <retrieveAliases>0</retrieveAliases>
+            <searchInSubPath>0</searchInSubPath>
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <type>0</type>
+         </options>
+      </ws:find>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="48ff1d7f-5acd-4eff-9805-6630fe0e9037" name="Match content of [fileName]"><con:configuration><path>declare namespace ns2='http://ws.logicaldoc.com';
+//ns2:findResponse[1]/searchResult[1]/hits[1]/fileName[1]/text()</path><content>titi.txt</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="61539067-66cc-437f-9062-54179efe2897" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Search/find" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="0ff3e1fd-a87a-49b4-b3e7-5016a56251af" name="find_by_date"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>find</con:operation><con:request name="find_by_date" id="5a6420b8-6bc4-4751-97a4-2d954d340ea4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:find>
+         <!--Optional:-->
+         <sid>${SID#SID}</sid>
+         <!--Optional:-->
+         <options>
+            <caseSensitive>0</caseSensitive>
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Zero or more repetitions:-->
+            
+            <!--Zero or more repetitions:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <creationFrom>${#TestSuite#dateFrom}</creationFrom><expression>${#TestSuite#keyword}</expression><maxHits>50</maxHits>
+            <!--Optional:-->
+            
+            <retrieveAliases>0</retrieveAliases>
+            <searchInSubPath>0</searchInSubPath>
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+            <type>0</type>
+         </options>
+      </ws:find>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="48ff1d7f-5acd-4eff-9805-6630fe0e9037" name="Match content of [fileName]"><con:configuration><path>declare namespace ns2='http://ws.logicaldoc.com';
+//ns2:findResponse[1]/searchResult[1]/hits[1]/fileName[1]/text()</path><content>titi.txt</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="767df748-be72-4c63-8ca0-b802f320d593" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Search/find" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>8f6ee474-61d2-412d-bc33-5e63e2ffe696</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties><con:property><con:name>user</con:name><con:value>admin</con:value></con:property><con:property><con:name>password</con:name><con:value>admin</con:value></con:property><con:property><con:name>fileName</con:name><con:value>titi.txt</con:value></con:property><con:property><con:name>dateFrom</con:name><con:value>24/08/2018</con:value></con:property><con:property><con:name>language</con:name><con:value>en</con:value></con:property><con:property><con:name>keyword</con:name><con:value>titi</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository/><con:tags/></con:soapui-project>
