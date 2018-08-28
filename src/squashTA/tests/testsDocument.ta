@@ -3,7 +3,13 @@ SETUP :
 TEST :
 
 #  EXECUTE_SOAPUI ProjectLogicalDocDocumentAndFolder.xml WITH TEST_SUITE TestSuiteProjectDocument AND TEST_CASE TestCaseCreateDocument
+
 #  EXECUTE_SOAPUI ProjectLogicalDocDocumentAndFolder.xml WITH TEST_SUITE TestSuiteProjectDocument AND TEST_CASE TestCaseUpdateDocument
+
 #  EXECUTE_SOAPUI ProjectLogicalDocDocumentAndFolder.xml WITH TEST_SUITE TestSuiteProjectDocument AND TEST_CASE TestCaseDeleteDocument
+
 #  EXECUTE_SOAPUI ProjectLogicalDocDocumentAndFolder.xml WITH TEST_SUITE TestSuiteProjectDocument AND TEST_CASE TestCaseCreateFolder
 
+#  EXECUTE_SOAPUI ProjectLogicalDocDocumentAndFolder.xml WITH TEST_SUITE TestSuiteProjectDocument AND TEST_CASE TestCaseBookmark
+
+#  EXECUTE_SOAPUI ProjectLogicalDocDocumentAndFolder.xml WITH TEST_SUITE TestSuiteProjectDocument AND TEST_CASE TestCaseSearch

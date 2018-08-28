@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="a9debb42-ceb9-4694-8465-04ff9dc39715" created="2.4.0" activeEnvironment="Default environment" name="Logicaldoc_SOAP_Search" resourceRoot="${projectDir}" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6aff5093-6952-4dcf-b59e-f6ff20885b9f" wsaVersion="NONE" name="SoapSearchServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapSearchServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/logicaldoc/services/Search?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/logicaldoc/services/Search?wsdl"><con:part><con:url>http://localhost:8080/logicaldoc/services/Search?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapSearchServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+<con:soapui-project id="a9debb42-ceb9-4694-8465-04ff9dc39715" created="2.4.0" activeEnvironment="Default" name="Logicaldoc_SOAP_Search" resourceRoot="${projectDir}" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6aff5093-6952-4dcf-b59e-f6ff20885b9f" wsaVersion="NONE" name="SoapSearchServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapSearchServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/logicaldoc/services/Search?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/logicaldoc/services/Search?wsdl"><con:part><con:url>http://localhost:8080/logicaldoc/services/Search?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapSearchServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
   <wsdl:import location="http://localhost:8080/logicaldoc/services/Search?wsdl=Search.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
   <wsdl:binding name="SoapSearchServiceServiceSoapBinding" type="ns1:Search">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -514,131 +514,7 @@
          <sid>?</sid>\r
       </ws:valid>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/valid"/></con:call></con:operation></con:interface><con:testSuite id="b51e8ff6-eb27-407e-8f71-02bea6dbb5d4" name="SoapSearchServiceServiceSoapBindingTestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="66ff6151-a638-4484-85cd-37cff4e9440e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="searchTestCase" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="request" id="f4acdd98-06cb-474f-93b0-cc8499ba7a29" name="login"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="login" id="1f85be5a-050b-4a79-8ea9-17ddb112ee50"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:login>
-         <!--Optional:-->
-         <username>${#TestSuite#user}</username>
-         <!--Optional:-->
-         <password>${#TestSuite#password}</password>
-      </ws:login>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Auth/login" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="PropertyTransfer 1" id="695c7db8-764b-4979-b78b-be37e9ff1b88"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>return</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>login</con:sourceStep><con:sourcePath>declare namespace ns2='http://ws.logicaldoc.com';
-//ns2:loginResponse[1]/return[1]</con:sourcePath><con:targetType>SID</con:targetType><con:targetStep>SID</con:targetStep><con:targetPath/><con:type>XPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="SID" id="8f6ee474-61d2-412d-bc33-5e63e2ffe696"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>SID</con:name><con:value>ccc8bc40-2193-40fc-ad18-44a961f8b9e0</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="e1b45406-84e2-4994-8aba-eec0f78bbc9f" name="findByFilename"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>findByFilename</con:operation><con:request name="findByFilename" id="e35880ef-d920-4e21-a426-c00b8133f39d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:findByFilename>
-         <!--Optional:-->
-         <sid>${SID#SID}</sid>
-         <!--Optional:-->
-         <filename>${#TestSuite#fileName}</filename>
-      </ws:findByFilename>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="b7d16087-ab72-464a-9da1-c72f62df6620" name="Match content of [fileName]"><con:configuration><path>declare namespace ns2='http://ws.logicaldoc.com';
-//ns2:findByFilenameResponse[1]/document[1]/fileName[1]/text()</path><content>titi.txt</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="626bd86b-e613-4682-a052-2600430cc105" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Search/findByFilename" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="e78bad1a-37b7-4542-a89e-cd78e27121ad" name="find_by_keyword"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>find</con:operation><con:request name="find_by_keyword" id="5a6420b8-6bc4-4751-97a4-2d954d340ea4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:find>
-         <!--Optional:-->
-         <sid>${SID#SID}</sid>
-         <!--Optional:-->
-         <options>
-            <caseSensitive>0</caseSensitive>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Zero or more repetitions:-->
-            
-            <!--Zero or more repetitions:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <expression>${#TestSuite#keyword}</expression><maxHits>50</maxHits>
-            <!--Optional:-->
-            
-            <retrieveAliases>0</retrieveAliases>
-            <searchInSubPath>0</searchInSubPath>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <type>0</type>
-         </options>
-      </ws:find>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="48ff1d7f-5acd-4eff-9805-6630fe0e9037" name="Match content of [fileName]"><con:configuration><path>declare namespace ns2='http://ws.logicaldoc.com';
-//ns2:findResponse[1]/searchResult[1]/hits[1]/fileName[1]/text()</path><content>titi.txt</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="61539067-66cc-437f-9062-54179efe2897" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Search/find" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="0ff3e1fd-a87a-49b4-b3e7-5016a56251af" name="find_by_date"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>find</con:operation><con:request name="find_by_date" id="5a6420b8-6bc4-4751-97a4-2d954d340ea4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:find>
-         <!--Optional:-->
-         <sid>${SID#SID}</sid>
-         <!--Optional:-->
-         <options>
-            <caseSensitive>0</caseSensitive>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Zero or more repetitions:-->
-            
-            <!--Zero or more repetitions:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <creationFrom>${#TestSuite#dateFrom}</creationFrom><expression>${#TestSuite#keyword}</expression><maxHits>50</maxHits>
-            <!--Optional:-->
-            
-            <retrieveAliases>0</retrieveAliases>
-            <searchInSubPath>0</searchInSubPath>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <type>0</type>
-         </options>
-      </ws:find>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="48ff1d7f-5acd-4eff-9805-6630fe0e9037" name="Match content of [fileName]"><con:configuration><path>declare namespace ns2='http://ws.logicaldoc.com';
-//ns2:findResponse[1]/searchResult[1]/hits[1]/fileName[1]/text()</path><content>titi.txt</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="767df748-be72-4c63-8ca0-b802f320d593" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://endpoint.soap.webservice.logicaldoc.com/Search/find" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>8f6ee474-61d2-412d-bc33-5e63e2ffe696</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties><con:property><con:name>user</con:name><con:value>admin</con:value></con:property><con:property><con:name>password</con:name><con:value>admin</con:value></con:property><con:property><con:name>fileName</con:name><con:value>titi.txt</con:value></con:property><con:property><con:name>dateFrom</con:name><con:value>24/08/2018</con:value></con:property><con:property><con:name>language</con:name><con:value>en</con:value></con:property><con:property><con:name>keyword</con:name><con:value>titi</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/valid"/></con:call></con:operation></con:interface><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to SoapUI Pro tests
 
 // If hardcoding the token, uncomment and change line 5

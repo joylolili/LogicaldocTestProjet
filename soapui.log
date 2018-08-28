@@ -1,5 +1,5 @@
-2018-08-28 13:56:30,290 WARN  [SoapUI] Missing folder [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\.\ext] for external libraries
-2018-08-28 13:56:30,886 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\formation\soapui-settings.xml]
-2018-08-28 13:56:31,912 INFO  [SoapUI] File [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\file:\C:\Users\FORMAT~1\AppData\Local\Temp\Squash_TA\20180828_135543_574\tests\tests\testsDocument.ta\ta_url_repo_ProjetLo511512938952574536.xml] does not exist, trying URL instead
-2018-08-28 13:56:32,036 INFO  [WsdlProject] Loaded project from [file:/C:/Users/FORMAT~1/AppData/Local/Temp/Squash_TA/20180828_135543_574/tests/tests/testsDocument.ta/ta_url_repo_ProjetLo511512938952574536.xml]
-2018-08-28 13:56:32,062 WARN  [WsdlProject] Project 'ProjetLogicalDocAntoine' is from a newer version (5.4.0) of soapUI than this (4.0.1) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2018-08-28 17:46:10,354 WARN  [SoapUI] Missing folder [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\.\ext] for external libraries
+2018-08-28 17:46:10,604 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\formation\soapui-settings.xml]
+2018-08-28 17:46:11,092 INFO  [SoapUI] File [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\file:\C:\Users\FORMAT~1\AppData\Local\Temp\Squash_TA\20180828_174549_000\tests\tests\testsDocument.ta\ta_url_repo_ProjectL4860234130182407655.xml] does not exist, trying URL instead
+2018-08-28 17:46:11,149 INFO  [WsdlProject] Loaded project from [file:/C:/Users/FORMAT~1/AppData/Local/Temp/Squash_TA/20180828_174549_000/tests/tests/testsDocument.ta/ta_url_repo_ProjectL4860234130182407655.xml]
+2018-08-28 17:46:11,168 WARN  [WsdlProject] Project 'ProjetLogicalDocAntoine' is from a newer version (5.4.0) of soapUI than this (4.0.1) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
