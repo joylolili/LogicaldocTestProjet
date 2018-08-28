@@ -1,3 +1,0 @@
-TEST :
-
-#  EXECUTE_SOAPUI Logicaldoc_SOAP_Search-readyapi-project.xml WITH TEST_SUITE SoapSearchServiceServiceSoapBindingTestSuite AND TEST_CASE searchTestCase
