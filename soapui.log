@@ -1,5 +1,5 @@
-2018-08-28 09:40:35,527 WARN  [SoapUI] Missing folder [C:\Users\formation\Documents\MODULE2\PROJET2\workspaceProjet\LogicaldocTestProjet\.\ext] for external libraries
-2018-08-28 09:40:35,761 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\formation\soapui-settings.xml]
-2018-08-28 09:40:36,247 INFO  [SoapUI] File [C:\Users\formation\Documents\MODULE2\PROJET2\workspaceProjet\LogicaldocTestProjet\file:\C:\Users\FORMAT~1\AppData\Local\Temp\Squash_TA\20180828_094029_176\tests\tests\bookmark-test.ta\ta_url_repo_Logicald1059244501111722492.xml] does not exist, trying URL instead
-2018-08-28 09:40:36,282 INFO  [WsdlProject] Loaded project from [file:/C:/Users/FORMAT~1/AppData/Local/Temp/Squash_TA/20180828_094029_176/tests/tests/bookmark-test.ta/ta_url_repo_Logicald1059244501111722492.xml]
-2018-08-28 09:40:36,297 WARN  [WsdlProject] Project 'Logicaldoc_SOAP_Bookmark' is from a newer version (5.4.0) of soapUI than this (4.0.1) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2018-08-28 10:30:04,069 WARN  [SoapUI] Missing folder [C:\Users\formation\Documents\MODULE2\PROJET2\workspaceProjet\LogicaldocTestProjet\.\ext] for external libraries
+2018-08-28 10:30:04,303 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\formation\soapui-settings.xml]
+2018-08-28 10:30:04,728 INFO  [SoapUI] File [C:\Users\formation\Documents\MODULE2\PROJET2\workspaceProjet\LogicaldocTestProjet\file:\C:\Users\FORMAT~1\AppData\Local\Temp\Squash_TA\20180828_102959_441\tests\tests\search-test.ta\ta_url_repo_Logicald7118379492930718604.xml] does not exist, trying URL instead
+2018-08-28 10:30:04,762 INFO  [WsdlProject] Loaded project from [file:/C:/Users/FORMAT~1/AppData/Local/Temp/Squash_TA/20180828_102959_441/tests/tests/search-test.ta/ta_url_repo_Logicald7118379492930718604.xml]
+2018-08-28 10:30:04,776 WARN  [WsdlProject] Project 'Logicaldoc_SOAP_Search' is from a newer version (5.4.0) of soapUI than this (4.0.1) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
