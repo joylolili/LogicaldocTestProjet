@@ -1,0 +1,7 @@
+TEST :
+
+#  EXECUTE_SOAPUI Logicaldoc_SOAP_Bookmark-readyapi-project.xml WITH TEST_SUITE SoapBookmarkServiceServiceSoapBindingTestSuite AND TEST_CASE loginTestCase
+
+#  EXECUTE_SOAPUI Logicaldoc_SOAP_Bookmark-readyapi-project.xml WITH TEST_SUITE SoapBookmarkServiceServiceSoapBindingTestSuite AND TEST_CASE bookmarkDocumentTestCase
+
+#  EXECUTE_SOAPUI Logicaldoc_SOAP_Bookmark-readyapi-project.xml WITH TEST_SUITE SoapBookmarkServiceServiceSoapBindingTestSuite AND TEST_CASE unbookmarkDocumentTestCase
