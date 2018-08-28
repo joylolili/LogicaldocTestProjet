@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="680a4e15-89fa-45a8-9a59-edfc5e3486ff" created="2.4.0" activeEnvironment="Default" name="ProjetLogicalDocAntoine" resourceRoot="${projectDir}" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="680a4e15-89fa-45a8-9a59-edfc5e3486ff" created="2.4.0" activeEnvironment="Default" name="ProjetLogicalDocAndFolder" resourceRoot="${projectDir}" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value=""/>
   <con:entry key="Host:Port" value=""/>
   <con:entry key="Export JUnit Results" value="false"/>

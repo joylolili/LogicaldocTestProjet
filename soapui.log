@@ -1,5 +1,5 @@
-2018-08-28 17:49:12,903 WARN  [SoapUI] Missing folder [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\.\ext] for external libraries
-2018-08-28 17:49:13,144 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\formation\soapui-settings.xml]
-2018-08-28 17:49:13,525 INFO  [SoapUI] File [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\file:\C:\Users\FORMAT~1\AppData\Local\Temp\Squash_TA\20180828_174852_318\tests\tests\testsDocument.ta\ta_url_repo_ProjectL3023908944690157812.xml] does not exist, trying URL instead
-2018-08-28 17:49:13,587 INFO  [WsdlProject] Loaded project from [file:/C:/Users/FORMAT~1/AppData/Local/Temp/Squash_TA/20180828_174852_318/tests/tests/testsDocument.ta/ta_url_repo_ProjectL3023908944690157812.xml]
-2018-08-28 17:49:13,605 WARN  [WsdlProject] Project 'ProjetLogicalDocAntoine' is from a newer version (5.4.0) of soapUI than this (4.0.1) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.
+2018-08-28 17:57:17,216 WARN  [SoapUI] Missing folder [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\.\ext] for external libraries
+2018-08-28 17:57:17,420 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\formation\soapui-settings.xml]
+2018-08-28 17:57:17,807 INFO  [SoapUI] File [C:\Users\formation\Desktop\Projet2\LogicaldocTestProjet\file:\C:\Users\FORMAT~1\AppData\Local\Temp\Squash_TA\20180828_175656_321\tests\tests\TestCaseUpdateDocument.ta\ta_url_repo_ProjectL6166622837622055564.xml] does not exist, trying URL instead
+2018-08-28 17:57:17,879 INFO  [WsdlProject] Loaded project from [file:/C:/Users/FORMAT~1/AppData/Local/Temp/Squash_TA/20180828_175656_321/tests/tests/TestCaseUpdateDocument.ta/ta_url_repo_ProjectL6166622837622055564.xml]
+2018-08-28 17:57:17,897 WARN  [WsdlProject] Project 'ProjetLogicalDocAndFolder' is from a newer version (5.4.0) of soapUI than this (4.0.1) and parts of it may be incompatible or incorrect. Saving this project with this version of soapUI may cause it to function differently.

@@ -1,1 +1,1 @@
-{"timestamp":"2018-08-28T15:48:52.385+0000","name":"tests","contents":[{"name":"testsDocument.ta","contents":null}]}
+{"timestamp":"2018-08-28T15:56:56.393+0000","name":"tests","contents":[{"name":"TestCaseBookmark.ta","contents":null},{"name":"TestCaseCreateDocument.ta","contents":null},{"name":"TestCaseCreateFolder.ta","contents":null},{"name":"TestCaseDeleteDocument.ta","contents":null},{"name":"TestCaseSearch.ta","contents":null},{"name":"TestCaseUpdateDocument.ta","contents":null}]}

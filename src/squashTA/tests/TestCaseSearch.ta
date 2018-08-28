@@ -1,0 +1,5 @@
+SETUP :
+
+TEST :
+
+#  EXECUTE_SOAPUI ProjectLogicalDocDocumentAndFolder.xml WITH TEST_SUITE TestSuiteProjectDocument AND TEST_CASE TestCaseSearch

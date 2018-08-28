@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite time="19.548" failures="0" tests="1" name="tests" >
-  <testcase time="19.537" classname="tests" name="testsDocument.ta" />
+<testsuite time="19.743" failures="0" tests="6" name="tests" >
+  <testcase time="3.446" classname="tests" name="TestCaseBookmark.ta" />
+  <testcase time="3.161" classname="tests" name="TestCaseCreateDocument.ta" />
+  <testcase time="3.268" classname="tests" name="TestCaseCreateFolder.ta" />
+  <testcase time="3.039" classname="tests" name="TestCaseDeleteDocument.ta" />
+  <testcase time="3.358" classname="tests" name="TestCaseSearch.ta" />
+  <testcase time="3.468" classname="tests" name="TestCaseUpdateDocument.ta" />
 </testsuite>
